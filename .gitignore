@@ -92,4 +92,5 @@ data/
 
 # Distribution binaries (should be released separately, not committed)
 DeSciOS-Launcher-*.0-Windows/
-DeSciOS-Launcher-*.0-macOS/ 
+DeSciOS-Launcher-*.0-macOS/ target
+target/
