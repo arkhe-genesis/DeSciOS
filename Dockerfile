@@ -2,7 +2,8 @@ FROM python:3.10-slim-bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV USER=deScier
-ARG PASSWORD=vncpassword
+ARG PASSWORD
+RUN if [ -z "$PASSWORD" ]; then echo "ERROR: PASSWORD build-arg is required"; \/usr\/bin\/env false; fi
 
 # Basic system setup
 RUN apt update && apt install -y \
