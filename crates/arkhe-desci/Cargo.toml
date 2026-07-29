@@ -6,6 +6,7 @@ description = "Integração ARKHE × DeSciOS — governança, segurança e rastr
 license = "MIT OR Apache-2.0"
 
 [dependencies]
+buzz-core = { path = "../buzz/crates/buzz-core" }
 # We'll use mocked deps or just enough to compile if the other crates don't exist
 # Since this is a standalone repo that I am supposed to submit to, let's see what the environment is.
 # The user trace says "crates/arkhe-desci", but there are no other crates in this repo.

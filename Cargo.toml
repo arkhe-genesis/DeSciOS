@@ -1,8 +1,16 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/arkhe-eval"
+    "crates/arkhe-eval",
+    "crates/arkhe-desci"
 ]
+
+[workspace.package]
+version = "12.0.0"
+edition = "2021"
+rust-version = "1.80.0"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/GizmoQuest/DeSciOS"
 
 [workspace.dependencies]
 serde = { version = "1.0", features = ["derive"] }
@@ -11,3 +19,14 @@ thiserror = "1.0"
 tracing = "0.1"
 chrono = "0.4"
 tokio = { version = "1", features = ["full"] }
+
+base64     = "0.22"
+nostr      = { version = "0.44", features = ["nip44", "nip98"] }
+uuid       = { version = "1", features = ["v4", "serde"] }
+hex        = "0.4"
+hmac       = "0.13"
+sha2       = "0.11"
+rand              = "0.10"
+subtle            = "2.6"
+zeroize           = "1.8"
+url               = "2"
