@@ -1,0 +1,32 @@
+/* ARKHE Theme — Snippet para .obsidian/snippets/arkhe.css */
+
+/* Cores base — paleta ARKHE */
+.theme-dark {
+  --background-primary: #0a0e14;
+  --background-secondary: #111820;
+  --text-normal: #c8d0d8;
+  --text-accent: #4af0a0;
+  --text-accent-hover: #6affb0;
+  --interactive-accent: #4af0a0;
+}
+
+/* Selos — destaque visual */
+.cm-s-obsidian span.cm-hash {
+  color: #4af0a0;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(74, 240, 160, 0.1);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Blocos de código — para diagramas e selos */
+.HyperMD-codeblock {
+  border-left: 3px solid #4af0a0;
+}
+
+/* Frontmatter — destaque */
+.frontmatter-container {
+  background: rgba(74, 240, 160, 0.05);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
