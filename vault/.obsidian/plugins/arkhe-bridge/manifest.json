@@ -1,0 +1,10 @@
+{
+	"id": "arkhe-bridge",
+	"name": "ARKHE Bridge",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Bridge for ARKHE analyses, hash generation and seal validation.",
+	"author": "ARKHE",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}
