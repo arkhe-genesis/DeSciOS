@@ -64,20 +64,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Find specification files
-        id: find-specs
-        run: |
-          echo "spec_files=$(find . -type f \( -name '*.md' -o -name '*.txt' -o -name '*.spec' \) | tr '\n' ' ')" >> $GITHUB_OUTPUT
-
       - name: Validate each specification file
         id: validate
         run: |
           mkdir -p reports
           EXIT_CODE=0
-          for file in ${{ steps.find-specs.outputs.spec_files }}; do
+          while IFS= read -r -d '' file; do
             echo "🔍 Validando: $file"
             python litho_verifier_v310.py "$file" --md-out "reports/$(basename "$file").md" --json-out "reports/$(basename "$file").json" || EXIT_CODE=1
-          done
+          done < <(find . -type f \( -name '*.md' -o -name '*.txt' -o -name '*.spec' \) -print0)
           echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
         continue-on-error: true
 
