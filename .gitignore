@@ -96,3 +96,4 @@ DeSciOS-Launcher-*.0-macOS/ crates/arkhe-desci/target/
 crates/arkhe-desci/target/
 target/
 node_modules/
+reports/
