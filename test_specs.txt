@@ -1,0 +1,2 @@
+Equipamento: Nanoscribe Quantum X Shape
+feature_size_xy: 100 nm
