@@ -802,6 +802,9 @@ class StateContract:
             "EvaluatorAgent": ["predictions"],
             "SynthesisAgent": ["predictions", "hessian_results"],
             "ScientificMediator": ["report"],
+            "PhysicoFMNeuralOperator": ["structures"],
+            "LatentPlanner": ["pareto_front", "predictions"],
+            "ContinualLearner": ["verified_dft_results"],
         }
         return mapping.get(agent_name, [])
 
@@ -821,6 +824,9 @@ class StateContract:
             "EvaluatorAgent": [],
             "SynthesisAgent": ["report", "report_text"],
             "ScientificMediator": [],
+            "PhysicoFMNeuralOperator": ["neural_field_predictions"],
+            "LatentPlanner": ["latent_decision"],
+            "ContinualLearner": ["continual_update"],
         }
         return mapping.get(agent_name, [])
 
